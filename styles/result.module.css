@@ -1,0 +1,284 @@
+.background {
+  background-image: url('/bluePaper.jpg');
+  /* Ensure the background image covers the entire background */
+  opacity: 0.90;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center; /* Centers the background image within the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0vw;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 1vh;
+  /*border: 0.5px solid black;*/
+  box-sizing: border-box;
+  flex-shrink: 1;
+  filter: blur(0px);
+
+}
+
+
+.img {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0.1px 0.1px 0.1px 0.1px black;
+  border-radius: 3%;
+  padding: 0;
+  width: 50%;
+  min-width: 300px;
+  height: 75%;
+  align-items: center;
+  box-sizing: border-box;
+  filter: contrast(110%);  
+  justify-content: center;
+  vertical-align: top;
+  
+}
+  
+  
+    .Resultcard{
+      backdrop-filter: blur(3px);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      overflow: hidden;
+      overflow: unset;
+      background-color: rgb(247, 246, 243);
+      width: 67.5vw;
+      height: 82.5vh;
+      align-items: center;
+      border-radius: 7px;
+      box-shadow: 2px 2px 10px 1px black;
+    }
+
+   .innerCard{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: flex-start;
+      width: 60vw;
+      height: 50vh;
+      gap: 1vh;
+      color: rgba(0, 0, 0, 1);
+      padding-top: 3vh;
+      font-size: 140%;
+      font-family: Arial;
+    }
+
+
+    .description{
+      margin-top: 2vh;
+      padding: 0 0.1vw 0 0.1vw;
+      width: 60vw;
+      -webkit-line-clamp: 4;
+      font-size: calc(15px + 0.5ch);
+    }
+
+
+
+  
+    .fadeIn {
+      animation: fadeInAnimation 0.8s ease forwards; /* Apply the fadeIn animation */
+    }
+    .fadeInEx {
+      animation: fadeInAnimation 1.2s ease forwards; /* Apply the fadeIn animation */
+    }
+    .enlarge {
+      animation: enlargeAnimation 1s ease forwards, fadeInAnimation 0.95s ease forwards;
+    }
+    .smallToBig{
+      animation: smallToBig 1.7s ease forwards, fadeInAnimation 1.5s ease forwards;
+    }
+    .cardResult{
+      animation-name: cardResult;
+      animation-duration: 1.2s; /* Adjust as needed */
+      animation-timing-function: ease;
+    }
+    
+    
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+    }
+  60%{
+         opacity: 0.01;
+   }
+    100% {
+        opacity: 1;
+    }
+    }
+    @keyframes enlargeAnimation {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.1);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+  
+  @keyframes smallToBig {
+    0% {
+        transform: scale(0.8);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
+  @keyframes cardResult {
+    0% {
+        transform: scale(0.66666);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+  }
+  
+  .button {
+    background-image: url('/home.svg');
+    background-size: contain; /* Scale the background image to fit within the element */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image vertically and horizontally */
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgba(232, 236, 232, 0.274);
+    text-size-adjust: 0.2;
+    width: calc(40px + 1vw);
+    height: calc(42px + 1vh);
+    align-content: center;
+    justify-content: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 120%;
+    font-family: Calibri;
+    position: relative;
+    margin-top: -11px;
+    margin-left: calc(-248px + 170.5% - 6vw);
+  }
+  .button:hover{
+      backdrop-filter: blur(5px);
+      transform: scale(1.05);
+      
+    } 
+  .button:activate{
+      font-size: 1.1em;
+    }
+
+  .share {
+      background-size: contain; /* Scale the background image to fit within the element */
+      background-repeat: no-repeat;
+      background-position: center; /* Center the background image vertically and horizontally */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background-color: rgba(232, 236, 232, 0.274);
+      width: calc(50px);
+      height: 40px;
+      border-radius: 2px;
+      flex-shrink: 1;
+      box-sizing: border-box;
+      font-family: Calibri;
+      border-radius: 40%;
+      position: relative;
+    }
+
+
+  .share:hover{
+        transform: scale(1.09);
+        background-color: rgba(5, 245, 37, 0.349);
+        
+      } 
+  .share:activate{
+        font-size: 1.1em;
+      }
+      
+  .socialbox {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  height: 5vh;
+  overflow: visible;
+  visibility: visible;
+  transform: translate(-105%, 430%);
+  gap: calc((1vw)*0.6 + 5px);
+  position:relative;
+}
+.socialboxAlter {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  height: 5vh;
+  overflow: visible;
+  visibility: visible;
+  z-index: 99999;
+  margin-top: 20vh;
+  margin-right: 60vw;
+  gap: calc((1vw)*0.6 + 5px);
+  position: relative;
+}
+  
+  
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 1200px) {
+    .share {
+    }
+    .Resultcard{
+     width: 90vw;
+     height: 82.5vh;
+    }
+    .description{
+      padding-top: 2vh;
+      width: 80vw;
+    }
+    .socialbox {
+      transform: translate(-155%, 445%);
+    }
+    .button{
+      margin-left: calc(-195px + 205% - 6vw);
+        }
+  }
+  
+    /* Media query for smaller screens */
+    @media screen and (max-width: 700px) {
+      .share {
+        width: 35px;
+        height: 35px;
+      }
+      .Resultcard{
+        width: 90vw;
+        aspect-ratio: 1/1;
+        flex-shrink: 1;
+        scale: 1;
+       }
+      .socialbox {
+        transform: translate(-160%, 460%);
+        gap: calc((6vw)*0.6 - 20px);
+      }
+      .description{
+        margin-top: -1vh;
+        font-size: calc(1.8vw + 1.8vh - 4.9px);
+      }
+      .button{
+        margin-left: calc(8px + 170.5% - 6vw);
+      }
+    }
+  
+  
