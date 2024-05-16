@@ -35,7 +35,6 @@ const Index = () => {
   const answersList = [];
 
   const testCount = pageData ? pageData.length : '';
-  console.log(testCount);
 
   
   
@@ -70,7 +69,7 @@ const Index = () => {
     <>
      <div className = {`${styles.background} ${styles.fadeIn}`}>
       {buttons}
-     <DropDowsDescriptionIndex></DropDowsDescriptionIndex>  
+     <DropDowsDescriptionIndex/>  
       </div>    
     </>
   );

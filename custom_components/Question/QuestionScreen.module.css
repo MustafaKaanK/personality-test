@@ -57,29 +57,27 @@
     
   }
 
-  .fadeIn {
-    animation: fadeInAnimation 3.5s ease forwards; /* Apply the fadeIn animation */
-  }
-  .fadeInEx {
-    animation: fadeInAnimation 0.85s ease forwards; /* Apply the fadeIn animation */
-  }
   .enlarge {
     animation: enlargeAnimation 1.25s ease forwards, fadeInAnimation 0.85s ease forwards;
   }
   .enlargeX {
-    animation: enlargeAnimationX 0.85s ease forwards, fadeInAnimation 0.8s ease forwards;       
+    animation: enlargeAnimationX 0.85s ease forwards, fadeInAnimation 0.8s ease forwards, avoidClick 1s ease;     
+    
   }
 
-  .enlargeO {
-    transition: transform 0.5s ease, opacity 0.5s ease;
+
+  @keyframes avoidClick {
+
+    0% {
+      pointer-events: none;
   }
-  .smallToBig {
-    animation: smallToBig 1.7s ease forwards, fadeInAnimation 1.5s ease forwards;
+99%{
+       pointer-events: none;
+ }
+  100% {
+    pointer-events: all;
   }
-  .cleanAnimation {
-    animation: clean 0.85s infinite, fadeInAnimation 0.8s ease forwards;
   }
-  
   
   @keyframes fadeInAnimation {
     0% {
@@ -112,48 +110,12 @@
       letter-spacing: 0px;
   }
   70% {
-      transform: scale(1.08);
+      transform: scale(1.09);
       font-weight: 300;
       font-style: normal;
   }
   100% {
       transform: scale(1);
-  }
-}
-
-@keyframes clean {
-  0% {
-      font-size: 125%;
-  }
-  70% {
-    font-size: 138%;
-  }
-  100% {
-    font-size: 125%;
-  }
-}
-
-@keyframes smallToBig {
-  0% {
-      transform: scale(0.8);
-  }
-  60% {
-      transform: scale(1.2);
-  }
-  100% {
-      transform: scale(1);
-  }
-}
-
-@keyframes cardResult {
-  0% {
-      transform: scale(0.83333);
-  }
-  60% {
-      transform: scale(1.06);
-  }
-  100% {
-      transform: scale(1.00);
   }
 }
 
@@ -174,10 +136,7 @@
   position: relative;
   cursor: pointer;
   border: 0.5px solid black;  
-  /* padding-right: 1%;*/
-  /*margin-left: calc(20px + 4vw);*/
   margin-left: 1%;
-   /* Disable text selection */
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -213,11 +172,8 @@
     position: relative;
     cursor: pointer;
     border: 0.5px solid black;
-    /*margin-right: calc(20px + 4vw);*/
-    /*adding-left: 1%;
-    padding-right: 1%;*/
     margin-right: 1%;
-
+    /*make text content unclickable*/
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -239,12 +195,11 @@
     text-align: center;
     font-family: Calibri;
     padding-left: 1%;
-    padding-right: 1%;
-    
+    padding-right: 1%;    
     flex-shrink: 0;
     padding-bottom: 1.5vh;
-    white-space: unset;
-
+    white-space: unset; /*Make text stay on one line
+     make text content unclickable*/
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -291,8 +246,8 @@
   font-size: 101%;
   font-weight: 500;
   font-family: Verdana;
-  white-space: nowrap;
-
+  white-space: nowrap;/*Make text stay on one line
+  make text content unclickable*/
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -302,7 +257,6 @@
 
 
 .option:hover {
-  /*backdrop-filter: blur(5px);*/
   transform: scale(1.06);
   background-color: rgba(5, 245, 37, 0.349);
   
@@ -362,7 +316,7 @@
     margin-top: 5vh;
   }
   .title{
-    width: calc( 69vw);
+    width: calc( 70vw);
     font-size: 115%;
     margin-top: calc(55px + 2vh);
     position: fixed;
@@ -378,7 +332,5 @@
     margin-left: calc(-50px + 72%);
   }
 
-  .outerCard{
-  }
 }
 

@@ -1,6 +1,5 @@
 .background {
   background-image: url('/bluePaper.jpg');
-  /* Ensure the background image covers the entire background */
   opacity: 0.90;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -14,7 +13,6 @@
   height: 100vh;
   width: 100vw;
   border-radius: 1vh;
-  /*border: 0.5px solid black;*/
   box-sizing: border-box;
   flex-shrink: 1;
   filter: blur(0px);
@@ -52,7 +50,7 @@
       height: 82.5vh;
       align-items: center;
       border-radius: 7px;
-      box-shadow: 2px 2px 10px 1px black;
+      box-shadow: 2px 2px 10px 1px black;      
     }
 
    .innerCard{
@@ -87,16 +85,10 @@
     .fadeInEx {
       animation: fadeInAnimation 1.2s ease forwards; /* Apply the fadeIn animation */
     }
-    .enlarge {
-      animation: enlargeAnimation 1s ease forwards, fadeInAnimation 0.95s ease forwards;
-    }
-    .smallToBig{
-      animation: smallToBig 1.7s ease forwards, fadeInAnimation 1.5s ease forwards;
-    }
     .cardResult{
       animation-name: cardResult;
       animation-duration: 1.2s; /* Adjust as needed */
-      animation-timing-function: ease;
+      animation-timing-function: ease forwards;
     }
     
     
@@ -138,15 +130,34 @@
   @keyframes cardResult {
     0% {
         transform: scale(0.66666);
+        will-change: transform;
     }
     50% {
         transform: scale(1.06);
+        will-change: transform;
     }
+    99% {transform: scale(1.001);
+      will-change: transform;
+  }
     100% {
         transform: scale(1.0);
     }
   }
   
+  @keyframes cardResult1 {
+    0% {
+        transform: scale(0.66666);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+    99% {transform: scale(1.001);
+  }
+    100% {
+        transform: scale(1.0);
+    }
+  }
+
   .button {
     background-image: url('/home.svg');
     background-size: contain; /* Scale the background image to fit within the element */

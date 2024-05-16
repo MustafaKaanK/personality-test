@@ -1,8 +1,8 @@
 .background {
-  background-image: url('/111111book-table.jpg');
+  background-image: url('/backgroundPic.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center; /* Centers the background image within the container */  
+  background-position: center; 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -12,19 +12,19 @@
   height: 100vh;
   width: 100vw;
   border-radius: 0;
-  /*border: 0.5px solid black;*/
   box-sizing: border-box;
   flex-shrink: 1;
+  will-change: opacity;
 
 }
  
 
 .customButton {
   
-  background-image: url('/Designer (4).jpeg');
-  background-size: 100% 100%; /* Adjust background size to contain within the button */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center; /* Center the background image */
+  background-image: url('/indexCover.jpeg');
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  background-position: center; 
   opacity: 95%;
   border: 2px solid #333;
   width: calc(300px + 2vw);
@@ -33,7 +33,7 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  margin-top: 20px; /* Adjust margin-top as needed */
+  margin-top: 20px; 
   justify-items: flex-end;
   align-content: flex-end;
   border-radius: 10%;
@@ -49,7 +49,7 @@
 
 
 .fadeIn {
-  animation: fadeInAnimation 1.1s ease; /* Apply the fadeIn animation */
+  animation: fadeInAnimation 1.3s ease;
 }
 
 @keyframes fadeInAnimation {
@@ -66,9 +66,7 @@
 
 @media screen and (max-width: 1200px) {
 
-  .customButton {
-   /* width: calc(23vw + 7vh);*/
-  }
+  
 
   .customButton:hover {
     transform: scale(1.00);
@@ -76,7 +74,6 @@
 
 
   .background {
-    background-image: url('/111111book-table.jpg');
     background-size: calc(75% + 350px) calc(90% + 200px);
     background-position: contain;
     background-repeat: no-repeat;
@@ -89,10 +86,7 @@
 
 @media screen and (max-width: 700px) {
 
-  .customButton {
-   /* width: calc(23vw + 10vh);*/
-   
-  }
+  
 
   .customButton:hover {
     transform: scale(1.00);

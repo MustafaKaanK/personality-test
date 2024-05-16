@@ -14,14 +14,13 @@ const Result = () =>{
   const [dataList] = useLocalStorage('myArray', '');
   const [newID, setnewID] = useLocalStorage('newID', '');
 
-  const name = "12345";
   
   const result = dataList ? dataList : '';
 
   
   useEffect(() => {
     if (testID) {
-      setnewID(testID); // Setting testID in localStorage
+      setnewID(testID); 
     } 
       const timeout = setTimeout(() => {
         setAnimationTrigger(false);
@@ -68,19 +67,13 @@ const Result = () =>{
   const descriptionText = description && index ? description.slice(index + 1): '';
   console.log(description == undefined);
   console.log(descriptionText);
-  /*
-  const index = description ? description.indexOf('/'): '';
-  const descriptionTitle = description.slice(0, index);
-  const descriptionText = description.slice(index + 1);
-*/
+
   const handleclick = () => {
     router.push({
       pathname:'/'
   })}
   
-  //Burayı routing işleminde koycaksın
-  
-   //optionbox kısmını sil
+
   return (
     <>
       <div className= {questionStyle.background}>      

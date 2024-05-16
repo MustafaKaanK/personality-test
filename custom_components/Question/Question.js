@@ -3,21 +3,20 @@ import { useEffect, useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import dynamic from "next/dynamic";
 import questionStyle from './QuestionScreen.module.css';
-import DropdownDescription from '../Drop_down/DropDownForIndex';
 
 
 const Question = ({ testID, answersList, questionCount }) => {
   const router = useRouter();
   const [slug, setSlug] = useState(1);
-  const [index, setIndex] = useState(1);
   const [pageData, setPageData] = useState(null);
   const [sendData, setSendData] = useLocalStorage('myArray', []);
-  const [animationTrigger, setAnimationTrigger] = useState(true);
+  const [animationTrigger, setAnimationTrigger] = useState(null);
   const [mainAnimation, setMainAnimation] = useState(true);
 
   useEffect(() => {
+    setAnimationTrigger(true);
     const fetchData = async () => {    
-      console.log("True falselar ilk check"+animationTrigger + mainAnimation);
+      console.log("True falselar ilk check" + animationTrigger + mainAnimation);
       console.log(sendData);
       console.log("Slug " + slug);
       try {
@@ -30,32 +29,33 @@ const Question = ({ testID, answersList, questionCount }) => {
         console.error('Error fetching page data:', error);
       }
     };
-
+  
+  
     if (slug) {
       fetchData();
-      setIndex(slug);
     }
+  
+    const timeout = setTimeout(() => {
+      setAnimationTrigger(null);
+    }, 860);
 
-    setAnimationTrigger(true)
-
-    localStorage.removeItem('myArray');
-    console.log("True Falselar return "+animationTrigger + mainAnimation);
+    localStorage.removeItem('myArray');  
     return () => {
+      clearTimeout(timeout);
     };
-
+  
   }, [slug]);
 
   const description = pageData ? pageData.description : '';
   const optionsslug = pageData ? pageData.options : [];
 
+
   const handleClick = (input) => {
-    setAnimationTrigger(false);    
     if (slug == 1){
       setSendData(prev => {prev.push(input + 1); return prev;});
     }else{
       setSendData(prev => {prev.push(input + 1); return prev;});
-    }
-      
+    }      
 
     if (questionCount === slug) {
       router.push({
@@ -66,9 +66,9 @@ const Question = ({ testID, answersList, questionCount }) => {
       setSlug(prevSlug => prevSlug + 1);
     }
   };
+  
 
   const handlePrevious = () => {
-    setAnimationTrigger(false);
     if (slug > 1) {
       setSendData(prev => { prev.pop(); return prev; });
       setSlug(prevSlug => prevSlug - 1);
@@ -89,10 +89,6 @@ const Question = ({ testID, answersList, questionCount }) => {
     );
   });
 
-  // İlk saniyelerde hover efekti iptal etmeye çalışıyoz
-  //<div className={`${questionStyle.optionBox} ${animationTrigger ? questionStyle.enlargeX : questionStyle.cleanAnimation} ${animationTrigger ? questionStyle.disableHover : questionStyle.deActivateHover}`}>
-          
-
   return (
     <>
       <div className={`${questionStyle.background} ${mainAnimation ? questionStyle.enlarge : ''}`}>      
@@ -102,7 +98,7 @@ const Question = ({ testID, answersList, questionCount }) => {
           <div className={`${questionStyle.innerCard}`}> 
             <div className={`${questionStyle.button} `} onClick={() => handlePrevious()}>BACK</div> 
             <div className={`${questionStyle.title} ${animationTrigger ? questionStyle.enlargeX : ''}`}>{description}</div>
-            <div className={`${questionStyle.index} `}>{index}/{questionCount}</div>
+            <div className={`${questionStyle.index} `}>{slug}/{questionCount}</div>
           </div>
           <div className={`${questionStyle.optionBox} ${animationTrigger ? questionStyle.enlargeX : ''}  `}>
             {optionArray}
