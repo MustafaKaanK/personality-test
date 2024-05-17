@@ -53,12 +53,12 @@ const Index = () => {
             <button key={i} className={styles.customButton} onClick={() => handleClick(i)} ><div></div></button>
         );
     }
-
+//<DropDownsDescriptionIndex />
     return (
         <>
             <div className={`${styles.background} ${styles.fadeIn}`}>
                 {buttons}
-                <DropDownsDescriptionIndex />
+                
             </div>
         </>
     );
