@@ -2,7 +2,7 @@
   background-image: url('/bluePaper.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,89 +17,86 @@
   will-change: transform, opacity;
 }
 
-.outerCard{
+.outerCard {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
   position: fixed;
-  
 }
 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color: rgb(247, 246, 243);
-    width: 600px;
-    aspect-ratio: 60/38;
-    align-items: center;
-    justify-content:flex-start;
-    border-radius: 7px;
-    box-shadow: 1.5px 1.5px 10px 1px black;
-    box-sizing: border-box;
-    margin-left: 18px;
-    margin-right: 35px;
-    flex-shrink: 1;
-    vertical-align: top;
-    
-  }
-.innerCard{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: start-flex;
-    flex-direction: row;
-    width: 600px;
-    justify-content: space-evenly;
-    justify-items: space-between;
-    margin-top: 20px;
-    
-  }
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgb(247, 246, 243);
+  width: 600px;
+  aspect-ratio: 60/38;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 7px;
+  box-shadow: 1.5px 1.5px 10px 1px black;
+  box-sizing: border-box;
+  margin-left: 18px;
+  margin-right: 35px;
+  flex-shrink: 1;
+  vertical-align: top;
+}
 
-  .enlarge {
-    animation: enlargeAnimation 1.25s ease forwards, fadeInAnimation 0.85s ease forwards;
-  }
-  .enlargeX {
-    animation: enlargeAnimationX 0.85s ease forwards, fadeInAnimation 0.8s ease forwards, avoidClick 1s ease;     
-    
-  }
+.innerCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start-flex;
+  flex-direction: row;
+  width: 600px;
+  justify-content: space-evenly;
+  justify-items: space-between;
+  margin-top: 20px;
+}
 
+.enlarge {
+  animation: enlargeAnimation 1.5s ease forwards, fadeInAnimation 0.85s ease forwards;
+}
 
-  @keyframes avoidClick {
+.enlargeX {
+  animation: enlargeAnimationX 0.85s ease forwards, fadeInAnimation 0.8s ease forwards, avoidClick 1s ease;
+}
 
-    0% {
+@keyframes avoidClick {
+  0% {
       pointer-events: none;
   }
-99%{
-       pointer-events: none;
- }
+  99% {
+      pointer-events: none;
+  }
   100% {
-    pointer-events: all;
+      pointer-events: all;
   }
-  }
-  
-  @keyframes fadeInAnimation {
-    0% {
+}
+
+@keyframes fadeInAnimation {
+  0% {
       opacity: 0;
   }
-60%{
-       opacity: 0.01;
- }
+  60% {
+      opacity: 0.01;
+  }
   100% {
       opacity: 1;
   }
+}
+
+@keyframes enlargeAnimation {
+  0% {
+      transform: scale(1);
   }
-  @keyframes enlargeAnimation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.25);
-    }
-    100% {
-        transform: scale(1);        
-    }
+  40% {
+      transform: scale(1.45);
+  }
+  100% {
+      transform: scale(1);
+  }
 }
 
 @keyframes enlargeAnimationX {
@@ -124,213 +121,193 @@
   flex-wrap: wrap;
   flex-direction: column;
   background-color: rgba(232, 236, 232, 0.274);
-  font-size: 18px; /* Adjust text size to fit inside the element */
+  font-size: 18px;
   width: calc(70px);
   height: 35px;
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;    
+  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
   flex-shrink: 1;
   box-sizing: content-box;
   position: relative;
   cursor: pointer;
-  border: 0.5px solid black;  
+  border: 0.5px solid black;
   margin-left: 1%;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
 }
 
-.button:hover{
-    backdrop-filter: blur(5px);
-    transform: scale(1.05);
-    background-color: rgba(5, 245, 37, 0.349);
-    
-  } 
-.button:activate{
-    font-size: 1.1em;
-  }
-  
-  
-  .index{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color: rgba(232, 236, 232, 0.274);
-    font-size: 25px;
-    width: calc(70px);
-    height: 35px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px black;    
-    flex-shrink: 1;
-    box-sizing: content-box;
-    position: relative;
-    cursor: pointer;
-    border: 0.5px solid black;
-    margin-right: 1%;
-    /*make text content unclickable*/
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.button:hover {
+  backdrop-filter: blur(5px);
+  transform: scale(1.05);
+  background-color: rgba(5, 245, 37, 0.349);
+}
 
-  }
+.button:activate {
+  font-size: 1.1em;
+}
 
-.title{    
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgba(232, 236, 232, 0.274);
+  font-size: 25px;
+  width: calc(70px);
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  flex-shrink: 1;
+  box-sizing: content-box;
+  position: relative;
+  border: 0.5px solid black;
+  margin-right: 1%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.title {
   box-sizing: border-box;
   text-overflow: break-word;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 125%;
-    font-weight: 400;
-    height: 50px;
-    width: 400px;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    font-family: Calibri;
-    padding-left: 1%;
-    padding-right: 1%;    
-    flex-shrink: 0;
-    padding-bottom: 1.5vh;
-    white-space: unset; /*Make text stay on one line
-     make text content unclickable*/
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    
-    
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 125%;
+  font-weight: 400;
+  height: 50px;
+  width: 400px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-family: Calibri;
+  padding-left: 1%;
+  padding-right: 1%;
+  flex-shrink: 0;
+  padding-bottom: 1.5vh;
+  white-space: unset;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.optionBox{
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-shrink: 0;
-    justify-content: flex-end;
-    align-content: center;
-    height: 300px;
-    width: 465px;
-    box-sizing: border-box;
-    position: relative;
-    top: 0px;
-    margin: 5px 15px 5px 15px; 
-    
+.optionBox {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  align-content: center;
+  height: 300px;
+  width: 465px;
+  box-sizing: border-box;
+  position: relative;
+  top: 0px;
+  margin: 5px 15px 5px 15px;
 }
-  
+
 .option {
   text-overflow: break-word;
   padding: 0% 7% 0% 7%;
   border: 1px solid black;
   display: flex;
-  flex-wrap: wrap; 
-  height: 55px; 
-  width: 540px; 
-  margin: 5px; 
-  border-radius: 70px; 
-  background-color: rgba(197, 187, 155, 0.116); 
-  color: rgb(0, 0, 0); 
-  align-items:center;
+  flex-wrap: wrap;
+  height: 55px;
+  width: 540px;
+  margin: 5px;
+  border-radius: 70px;
+  background-color: rgba(197, 187, 155, 0.116);
+  color: rgb(0, 0, 0);
+  align-items: center;
   text-align: center;
-  justify-content:center;
+  justify-content: center;
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.1s ease, background-color 0.3s ease;
   font-size: 101%;
   font-weight: 500;
   font-family: Verdana;
-  white-space: nowrap;/*Make text stay on one line
-  make text content unclickable*/
+  white-space: nowrap;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
 }
-
 
 .option:hover {
   transform: scale(1.06);
   background-color: rgba(5, 245, 37, 0.349);
-  
 }
+
 .disableHover {
   pointer-events: none;
 }
+
 .deActivateHover {
   pointer-events: all;
 }
 
-
-/* Media query for smaller screens */
 @media screen and (max-width: 1200px) {
-  
-  .button:hover{
-    transform: scale(1.00);
-    background-color: rgba(5, 245, 37, 0);
+  .button:hover {
+      transform: scale(1.00);
+      background-color: rgba(5, 245, 37, 0);
   }
-  .option:hover{    
-  transform: scale(1.00);
-  background-color: rgba(5, 245, 37, 0);
+  .option:hover {
+      transform: scale(1.00);
+      background-color: rgba(5, 245, 37, 0);
   }
 }
-
 
 @media screen and (max-width: 750px) {
-  
   .card {
-    width: 85%;
-    height: calc(145px + 68%);
-    overflow: visible;
+      width: 85%;
+      height: calc(145px + 68%);
+      overflow: visible;
   }
-
-  .optionBox{
-    height: 70%;
-    width: 75%;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: calc(50px + 11vh);
-    overflow: visible;
-    padding: 0px;
-    justify-content: center;
-    gap: 1%;
+  .optionBox {
+      height: 70%;
+      width: 75%;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: calc(50px + 11vh);
+      overflow: visible;
+      padding: 0px;
+      justify-content: center;
+      gap: 1%;
   }
-
-  .option{
-    font-size: 96%;
-    width: calc(120%);
-    white-space:unset;
-    height: calc(9.3vh);
-    margin-top: 1.2vh;
-    margin-bottom: 1.2vh;
+  .option {
+      font-size: 96%;
+      width: calc(120%);
+      white-space: unset;
+      height: calc(9.3vh);
+      margin-top: 1.2vh;
+      margin-bottom: 1.2vh;
   }
-  .innerCard{
-    width: calc(100%);
-    margin-top: 5vh;
+  .innerCard {
+      width: calc(100%);
+      margin-top: 5vh;
   }
-  .title{
-    width: calc( 70vw);
-    font-size: 115%;
-    margin-top: calc(55px + 2vh);
-    position: fixed;
-    flex-shrink: 0;
-    padding: 0;
+  .title {
+      width: calc(70vw);
+      font-size: 115%;
+      margin-top: calc(55px + 2vh);
+      position: fixed;
+      flex-shrink: 0;
+      padding: 0;
   }
-  .button{
-    position: fixed;
-    margin-left: calc(50px - 72%);
+  .button {
+      position: fixed;
+      margin-left: calc(50px - 72%);
   }
-  .index{
-    position: fixed;
-    margin-left: calc(-50px + 72%);
+  .index {
+      position: fixed;
+      margin-left: calc(-50px + 72%);
   }
-
 }
-

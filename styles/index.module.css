@@ -2,7 +2,7 @@
   background-image: url('/backgroundPic.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,16 +15,13 @@
   box-sizing: border-box;
   flex-shrink: 1;
   will-change: opacity;
-
 }
- 
 
 .customButton {
-  
   background-image: url('/indexCover.jpeg');
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   opacity: 95%;
   border: 2px solid #333;
   width: calc(300px + 2vw);
@@ -33,20 +30,18 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  margin-top: 20px; 
+  margin-top: 20px;
   justify-items: flex-end;
   align-content: flex-end;
   border-radius: 10%;
-  transition: transform 0.3s ease,;
+  transition: transform 0.3s ease;
   margin-left: 15%;
   margin-right: 15%;
-  
 }
 
 .customButton:hover {
   transform: scale(1.05);
 }
-
 
 .fadeIn {
   animation: fadeInAnimation 1.3s ease;
@@ -54,49 +49,34 @@
 
 @keyframes fadeInAnimation {
   0% {
-    opacity: 0;
-}
-50%{
-     opacity: 0.01;
-}
-100% {
-    opacity: 1;
-}
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.01;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-
-  
-
   .customButton:hover {
-    transform: scale(1.00);
+      transform: scale(1.00);
   }
-
 
   .background {
-    background-size: calc(75% + 350px) calc(90% + 200px);
-    background-position: contain;
-    background-repeat: no-repeat;
-    
-  
+      background-size: calc(75% + 350px) calc(90% + 200px);
+      background-position: contain;
+      background-repeat: no-repeat;
   }
-
-
 }
 
 @media screen and (max-width: 700px) {
-
-  
-
   .customButton:hover {
-    transform: scale(1.00);
+      transform: scale(1.00);
   }
-
 
   .background {
-    
-    background-size: calc(75% + 380px) calc(85% + 300px);
+      background-size: calc(75% + 380px) calc(85% + 300px);
   }
-
-
 }

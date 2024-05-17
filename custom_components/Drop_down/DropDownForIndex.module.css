@@ -1,30 +1,31 @@
 .container {
-    display: flex;
-    flex-flow: column;
-    place-content: flex-start;
-    place-items: center flex-start;
-    position: fixed;
-    margin-left: 74vw;
-    margin-top: -55vh;
-    box-sizing: content-box;
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  place-content: flex-start;
+  place-items: center flex-start;
+  position: fixed;
+  margin-left: 74vw;
+  margin-top: -55vh;
+  box-sizing: content-box;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
 }
 
 .fadeInEx {
   animation: fadeInAnimation 0.1s ease forwards; 
 }
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
-}
-80%{
-     opacity: 0.5;
-}
-100% {
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
     opacity: 1;
-}
+  }
 }
 
 .dropdownparagraph {
@@ -39,13 +40,12 @@
   font-size: clamp(16px, calc(0.7vw + 0.7vh), 17px);
   margin-right: 3vw;
   gap: 10px;
-
 }
 
 .dropdownparagraphopen {
   color: black;
   font-family: verdana;
-  max-height: 2000px; 
+  max-height: 2000px;
   max-width: 250px;
   width: 210px;
   transition: max-height 1s ease, padding 0.3s ease;
@@ -60,30 +60,26 @@
 }
 
 .position {
-      flex-shrink: 0;
-      background-image: url("/question_Mark.svg");
-      background-size: 100% 100%; 
-      background-repeat: no-repeat; 
-      background-position: center;
-      width: 50px;
-      height: 50px;
-      z-index: 9999;
-      background-color: white;
-      border-radius: 50%;
+  flex-shrink: 0;
+  background-image: url("/question_Mark.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 50%;
 }
-      
 
-.position:hover{
+.position:hover {
   transform: scale(1.07);
 }
 
 @media screen and (max-width: 1200px) {
-  
-
-  .position:hover{
+  .position:hover {
     transform: scale(1.00);
   }
-
 }
 
 @media screen and (max-width: 875px) {
@@ -92,15 +88,12 @@
     margin-top: -100px;
     font-size: 90%;
   }
-  .dropdownparagraph{
-
+  .dropdownparagraph {
     margin-right: 300px;
     margin-top: -100px;
     font-size: 90%;
   }
-
-  .position:hover{
+  .position:hover {
     transform: scale(1.00);
   }
-
 }
