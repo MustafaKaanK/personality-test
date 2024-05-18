@@ -3,7 +3,7 @@
   flex-flow: column;
   place-content: flex-start;
   place-items: center flex-start;
-  position: fixed;
+  position: absolute;
   margin-left: 74vw;
   margin-top: -55vh;
   box-sizing: content-box;
