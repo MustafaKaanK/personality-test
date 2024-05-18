@@ -8,8 +8,10 @@ const Index = () => {
     const router = useRouter();
     const [pageData, setPageData] = useState(null);
     const [sendData, setSendData] = useLocalStorage('myData', '');
+    const [animationTrigger, setAnimationTrigger] = useState(true);
 
     useEffect(() => {
+        setAnimationTrigger(true);
         const fetchData = async () => {
             try {
                 const response = await fetch(`http://localhost:8000/quizzes/`);
@@ -21,9 +23,18 @@ const Index = () => {
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
+            
         };
 
         fetchData();
+
+        const timeout = setTimeout(() => {
+            setAnimationTrigger(null);
+          }, 3860);
+
+          return () => {
+            clearTimeout(timeout);
+          };
 
     }, []);
 
@@ -55,10 +66,14 @@ const Index = () => {
     }
     return (
         <>
+        
             <div className={`${styles.background} ${styles.fadeIn}`}>
                 {buttons}
                 <DropDownsDescriptionIndex />
+            <div className={` ${ animationTrigger ? styles.blankpage : ''}`}>
+                
             </div>
+        </div>
         </>
     );
 };
