@@ -7,6 +7,8 @@
   align-items: center;
   background-color: #f0f0f0; /* Adjust as needed */
   z-index: 9999;
+  position: fixed;
+  background-size: 100% 100%;
 }
 
 .background {
@@ -48,6 +50,7 @@
   transition: transform 0.3s ease;
   margin-left: 15%;
   margin-right: 15%;
+  position: fixed;
 }
 
 .customButton:hover {
@@ -55,14 +58,14 @@
 }
 
 .fadeIn {
-  animation: fadeInAnimation 4.8s ease;
+  animation: fadeInAnimation 1.3s ease;
 }
-/* 3.6s*/
+/* 3.6s   için 4.8s *  %85*/
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
   }
-  85% {
+  45% {
       opacity: 0.01;
   }
   100% {

@@ -29,8 +29,8 @@ const Index = () => {
         fetchData();
 
         const timeout = setTimeout(() => {
-            setAnimationTrigger(null);
-          }, 4000);
+            setAnimationTrigger(false);
+          }, 1300);
 
           return () => {
             clearTimeout(timeout);
@@ -68,11 +68,12 @@ const Index = () => {
         <>
         
             <div className={`${styles.background} ${styles.fadeIn}`}>
+            
                 {buttons}
+                <div className={` ${ animationTrigger ? styles.blankpage : ''}`}/>
                 <DropDownsDescriptionIndex />
-            <div className={` ${ animationTrigger ? styles.blankpage : ''}`}>
+            
                 
-            </div>
         </div>
         </>
     );

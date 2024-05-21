@@ -58,7 +58,7 @@
   }
 
   .enlarge {
-    animation: enlargeAnimation 1.25s ease forwards, fadeInAnimation 0.85s ease forwards;
+    animation: enlargeAnimation 1.8s ease forwards, fadeInAnimation 0.85s ease forwards;
   }
   .enlargeX {
     animation: enlargeAnimationX 0.85s ease forwards, fadeInAnimation 0.8s ease forwards, avoidClick 1s ease;     
@@ -94,8 +94,8 @@
     0% {
         transform: scale(1);
     }
-    50% {
-        transform: scale(1.25);
+    30% {
+        transform: scale(1.75);
     }
     100% {
         transform: scale(1);        
