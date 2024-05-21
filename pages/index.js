@@ -70,7 +70,6 @@ const Index = () => {
             <div className={`${styles.background} ${styles.fadeIn}`}>
             
                 {buttons}
-                <div className={` ${ animationTrigger ? styles.blankpage : ''}`}/>
                 <DropDownsDescriptionIndex />
             
                 
