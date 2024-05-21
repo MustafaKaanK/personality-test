@@ -65,7 +65,7 @@ const Index = () => {
         );
     }
     return (
-        <>
+        <div className={styles.fadeIn}>
         
             <div className={`${styles.background} ${styles.fadeIn}`}>
             
@@ -75,7 +75,7 @@ const Index = () => {
             
                 
         </div>
-        </>
+        </div>
     );
 };
 
