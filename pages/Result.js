@@ -39,7 +39,7 @@ const Result = () =>{
         const payload = {
           selected_options: result
         };
-        const response = await fetch(`http://localhost:8000/quizzes/${newID}/submission/`, {
+        const response = await fetch(`https://quiz-backend-sk11.onrender.com/quizzes/${newID}/submission/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ const Index = () => {
         setAnimationTrigger(true);
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/quizzes/`);
+                const response = await fetch(`https://quiz-backend-sk11.onrender.com/quizzes/`);
                 if (response.ok) {
                     const data = await response.json();
                     setPageData(data);

@@ -17,7 +17,7 @@ const Question = ({ testID, answersList, questionCount }) => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/quizzes/${testID}/questions/${slug}`);
+        const response = await fetch(`https://quiz-backend-sk11.onrender.com/quizzes/${testID}/questions/${slug}`);
         if (response.ok) {
           const jsonData = await response.json();
           setPageData(jsonData);
