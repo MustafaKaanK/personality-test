@@ -89,7 +89,7 @@ const Question = ({ testID, answersList, questionCount }) => {
 
   return (
     <>
-      <div className={`${questionStyle.background} ${mainAnimation ? questionStyle.enlarge : ''}`}></div>
+      <div className={`${questionStyle.background} ${mainAnimation ? questionStyle.enlargeY : ''}`}></div>
       <div className={`${questionStyle.outerCard} ${mainAnimation ? questionStyle.enlarge : ''}`}>
         <div className={questionStyle.card}>
           <div className={`${questionStyle.innerCard}`}>
