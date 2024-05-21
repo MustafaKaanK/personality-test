@@ -33,7 +33,7 @@ const Question = ({ testID, answersList, questionCount }) => {
 
     const timeout = setTimeout(() => {
       setAnimationTrigger(null);
-    }, 860);
+    }, 2860);
 
     localStorage.removeItem('myArray');
 
@@ -90,7 +90,7 @@ const Question = ({ testID, answersList, questionCount }) => {
   return (
     <>
       <div className={`${questionStyle.background} ${mainAnimation ? questionStyle.enlarge : ''}`}></div>
-      <div className={`${questionStyle.outerCard} ${mainAnimation ? questionStyle.enlargeX : ''}`}>
+      <div className={`${questionStyle.outerCard} ${mainAnimation ? questionStyle.enlarge : ''}`}>
         <div className={questionStyle.card}>
           <div className={`${questionStyle.innerCard}`}>
             <div className={`${questionStyle.button}`} onClick={handlePrevious}>BACK</div>
