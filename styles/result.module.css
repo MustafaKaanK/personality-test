@@ -164,7 +164,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
