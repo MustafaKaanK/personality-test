@@ -336,6 +336,7 @@
     height: calc(9vh);
     margin-top: 1.2vh;
     margin-bottom: 1.2vh;
+    font-weight: 300;
   }
   .innerCard{
     width: calc(100%);
@@ -344,7 +345,7 @@
   }
   .title{
     width: calc( 70vw);
-    font-size: 25px;
+    font-size: 120%;
     margin-top: calc(40px + 2vh);
     position: fixed;
     flex-shrink: 0;
