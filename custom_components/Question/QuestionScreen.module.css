@@ -109,8 +109,8 @@
   0% {
       transform: scale(1);
   }
-  50% {
-      transform: scale(2.45);
+  70% {
+      transform: scale(3.45);
   }
   100% {
       transform: scale(1);        
