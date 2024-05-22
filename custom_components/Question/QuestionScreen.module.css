@@ -329,6 +329,7 @@
   .innerCard{
     width: calc(100%);
     margin-top: 5vh;
+    font-weight: 200;
   }
   .title{
     width: calc( 70vw);
@@ -337,14 +338,17 @@
     position: fixed;
     flex-shrink: 0;
     padding: 0;
+    font-weight: 200;
   }
   .button{
     position: fixed;
     margin-left: calc(50px - 72%);
+    font-weight: 200;
   }
   .index{
     position: fixed;
     margin-left: calc(-50px + 72%);
+    font-weight: 200;
   }
 
 }
