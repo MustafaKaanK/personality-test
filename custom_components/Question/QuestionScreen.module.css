@@ -344,7 +344,7 @@
   }
   .title{
     width: calc( 70vw);
-    font-size: 115%;
+    font-size: 25px;
     margin-top: calc(40px + 2vh);
     position: fixed;
     flex-shrink: 0;
