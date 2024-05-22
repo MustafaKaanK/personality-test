@@ -47,6 +47,7 @@
   align-items: center;
   border-radius: 7px;
   box-shadow: 2px 2px 10px 1px black;
+  box-sizing: border-box;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -273,13 +274,17 @@
   }
   .Resultcard {
       width: 90vw;
+      height: 70vh;
       aspect-ratio: 1/1;
       flex-shrink: 1;
       scale: 1;
+      margin-bottom: 10vh;
   }
   .socialbox {
       transform: translate(-160%, 460%);
       gap: calc((6vw)*0.6 - 20px);
+      margin-top: 50vh;
+      position: fixed;
   }
   .description {
       margin-top: -1vh;
