@@ -305,10 +305,14 @@
 
 
 @media screen and (max-width: 750px) {
+
+  .background{
+    background-size: 100% 80%;
+  }
   
   .card {
     width: 85%;
-    height: calc(145px + 68%);
+    height: calc(105px + 68%);
     overflow: visible;
   }
 
