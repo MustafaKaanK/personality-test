@@ -282,7 +282,7 @@
   }
   .socialbox {
       transform: translate(-160%, 460%);
-      gap: calc((6vw)*0.6 - 20px);
+      gap: calc((6vw)*0.6 - 10px);
       margin-top: 50vh;
       position: fixed;
   }
