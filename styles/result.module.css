@@ -274,7 +274,7 @@
   }
   .Resultcard {
       width: 90vw;
-      height: calc(70vh + 5px);
+      height: calc(70vh + 10px);
       aspect-ratio: 1/1;
       flex-shrink: 1;
       scale: 1;
@@ -285,12 +285,13 @@
       gap: calc((6vw)*0.6 - 10px);
       margin-top: 50vh;
       position: fixed;
+      margin-right: 10vw;
   }
   .description {
       margin-top: -1vh;
       font-size: calc(1.8vw + 1.8vh - 4.9px);
   }
   .button {
-      margin-left: calc(8px + 170.5% - 6vw);
+      margin-left: calc(72px + 170.5% - 6vw);
   }
 }
