@@ -33,7 +33,7 @@ const Question = ({ testID, answersList, questionCount }) => {
 
     const timeout = setTimeout(() => {
       setAnimationTrigger(null);
-    }, 1260);
+    }, 1160);
 
     localStorage.removeItem('myArray');
 
