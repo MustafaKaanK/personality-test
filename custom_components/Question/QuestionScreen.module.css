@@ -109,7 +109,7 @@
   0% {
       transform: scale(1);
   }
-  60% {
+  50% {
       transform: scale(1.75);
   }
   100% {
