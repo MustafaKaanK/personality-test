@@ -88,10 +88,10 @@ const Result = () =>{
             </div>
           </div>  
           <div className={questionStyle.socialbox}>
-            <FacebookShareButton className={questionStyle.share}  url='localhost'><FacebookIcon  borderRadius={40}></FacebookIcon></FacebookShareButton>
-            <LinkedinShareButton className={questionStyle.share} url='localhost'><LinkedinIcon  borderRadius={40}></LinkedinIcon></LinkedinShareButton>
-            <TwitterShareButton className={questionStyle.share}  url='localhost'><TwitterIcon  borderRadius={40}></TwitterIcon></TwitterShareButton>
-            <WhatsappShareButton className={questionStyle.share}  url='localhost'><WhatsappIcon  borderRadius={40}></WhatsappIcon></WhatsappShareButton> 
+            <FacebookShareButton className={questionStyle.share}  url='https://dog-personality-test.vercel.app/'><FacebookIcon  borderRadius={40}></FacebookIcon></FacebookShareButton>
+            <LinkedinShareButton className={questionStyle.share} url='https://dog-personality-test.vercel.app/'><LinkedinIcon  borderRadius={40}></LinkedinIcon></LinkedinShareButton>
+            <TwitterShareButton className={questionStyle.share}  url='https://dog-personality-test.vercel.app/'><TwitterIcon  borderRadius={40}></TwitterIcon></TwitterShareButton>
+            <WhatsappShareButton className={questionStyle.share}  url='https://dog-personality-test.vercel.app/'><WhatsappIcon  borderRadius={40}></WhatsappIcon></WhatsappShareButton> 
             <div className={questionStyle.button} onClick={() => handleclick()}></div> 
           </div>
         </div>
