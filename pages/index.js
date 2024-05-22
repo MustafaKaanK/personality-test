@@ -42,7 +42,7 @@ const Index = () => {
         const intervalId = setInterval(() => {
             // Your repeated action here
             const response = fetch(`https://quiz-backend-sk11.onrender.com/quizzes/`);
-        }, 10 * 60 * 1000); // 10 minutes in milliseconds
+        }, 9 * 60 * 1000); // 9 minutes in milliseconds
 
         // Cleanup function to clear the interval when the component unmounts
         return () => clearInterval(intervalId);
