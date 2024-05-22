@@ -312,8 +312,9 @@
   
   .card {
     width: 85%;
-    height: calc(60px + 62%);
+    height: calc(63px + 62%);
     overflow: visible;
+    margin-bottom: 15vh;
   }
 
   .optionBox{
