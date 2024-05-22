@@ -4,11 +4,11 @@
   place-content: flex-start;
   place-items: center flex-start;
   position: absolute;
-  margin-left: 74vw;
-  margin-top: -55vh;
-  box-sizing: content-box;
-  width: 200px;
-  height: 200px;
+  margin-left: 75vw;
+  margin-top: -74vh;
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
 }
 
@@ -96,6 +96,9 @@
   .container{
     margin-left: 74vw;
     margin-top: -42vh;
+    
+  max-width: 200px;
+  max-height: 200px;
   }
 
 }
