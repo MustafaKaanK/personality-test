@@ -38,7 +38,7 @@ const Index = () => {
 
         const timeout = setTimeout(() => {
             setAnimationTrigger(false);
-          }, 2700);
+          }, 3000);
 
           return () => {
             clearTimeout(timeout);
