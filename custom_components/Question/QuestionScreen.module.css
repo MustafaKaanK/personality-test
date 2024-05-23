@@ -74,10 +74,10 @@
   }
 
   .enlarge {
-    animation: enlargeAnimation 1.1s ease forwards, fadeInAnimation 0.85s ease forwards, avoidClick 6s ease;
+    animation: enlargeAnimation 1.1s ease forwards, fadeInAnimation 0.85s ease forwards;
   }
   .enlargeY {
-    animation: enlargeAnimationY 1.9s ease forwards, fadeInAnimation 0.85s ease forwards;
+    animation: enlargeAnimationY 1.9s ease forwards, fadeInAnimation 0.85s ease forwards, avoidClick 6s ease;
   }
   .enlargeX {
     animation: enlargeAnimationX 1.14s ease forwards, fadeInAnimation 1.22s ease forwards, avoidClick 1s ease;     
