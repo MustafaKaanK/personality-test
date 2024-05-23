@@ -26,7 +26,7 @@ const Question = ({ testID, answersList, questionCount }) => {
       } catch (error) {
         console.error('Error fetching page data:', error);
       }
-      return new Promise((resolve) => setTimeout(resolve, 2000));
+      return new Promise((resolve) => setTimeout(resolve, 2500));
     };
 
     if (slug) {
