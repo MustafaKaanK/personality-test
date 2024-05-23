@@ -80,7 +80,7 @@
 }
 
 .fadeIn {
-  animation: fadeInAnimation 3.9s ease;
+  animation: fadeInAnimation 5s ease;
 }
 /* 3.6s   için 4.8s *  %85*/
 @keyframes fadeInAnimation {
