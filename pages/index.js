@@ -83,11 +83,11 @@ const Index = () => {
         );
     }
 
-    if (loading) {
-        return <div className="spinner">Loading...</div>; // Your loading spinner or skeleton screen
-      }
+    
 
     return (
+        <>
+        <div className={`${questionStyle.spinner} ${animationTrigger ? questionStyle.spinneractive : ''}`}>Loading...</div>Loading has completed
         <div className={styles.fadeIn}>
         
             <div className={`${styles.background} ${styles.fadeIn}`}>
@@ -98,6 +98,7 @@ const Index = () => {
                 
         </div>
         </div>
+        </>
     );
 };
 

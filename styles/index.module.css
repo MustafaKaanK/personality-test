@@ -1,12 +1,16 @@
 .spinner {
-  display: flex;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 0px;
   font-weight: bold;
 }
+
+.spinneractive {
+  font-size: 24px;
+}
+
 
 .app {
   display: none; /* Initially hide the app content */
