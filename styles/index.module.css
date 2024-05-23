@@ -5,6 +5,7 @@
   height: 100vh;
   font-size: 24px;
   text-align: center;
+  text-justify: newspaper;
 }
 
 .app {
