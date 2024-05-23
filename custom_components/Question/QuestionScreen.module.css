@@ -135,6 +135,15 @@
         letter-spacing: 0px;
         
     }
+
+    40% {
+      transform: scale(1);
+      font-weight: lighter;
+      font-style: normal;
+      letter-spacing: 0px;
+      
+  }
+
     82% {
         transform: scale(1.25);
         font-weight: 300;
@@ -149,6 +158,11 @@
   0% {
       transform: scale(1);
   }
+  
+  40% {
+    transform: scale(1);
+}
+
   68% {
       transform: scale(1.9);
   }
