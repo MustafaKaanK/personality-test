@@ -9,6 +9,7 @@ const Index = () => {
     const [pageData, setPageData] = useState(null);
     const [sendData, setSendData] = useLocalStorage('myData', '');
     const [animationTrigger, setAnimationTrigger] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setAnimationTrigger(true);
@@ -23,10 +24,17 @@ const Index = () => {
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
-            
+            return new Promise((resolve) => setTimeout(resolve, 4000));
         };
 
-        fetchData();
+
+    
+      fetchData().then(() => {
+        setLoading(false);
+      });
+    
+
+
 
         const timeout = setTimeout(() => {
             setAnimationTrigger(false);
@@ -74,6 +82,11 @@ const Index = () => {
             <button key={i} className={styles.customButton} onClick={() => handleClick(i)} ><div></div></button>
         );
     }
+
+    if (loading) {
+        return <div className="spinner">Loading...</div>; // Your loading spinner or skeleton screen
+      }
+
     return (
         <div className={styles.fadeIn}>
         

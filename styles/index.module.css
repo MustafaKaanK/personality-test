@@ -1,3 +1,20 @@
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  text-align: center;
+}
+
+.app {
+  display: none; /* Initially hide the app content */
+}
+
+.app.loaded {
+  display: block; /* Show the app content when ready */
+}
+
 .blankpage {
   display: none;
   width: 100%;

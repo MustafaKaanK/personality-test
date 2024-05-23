@@ -11,6 +11,7 @@ const Question = ({ testID, answersList, questionCount }) => {
   const [sendData, setSendData] = useLocalStorage('myArray', []);
   const [animationTrigger, setAnimationTrigger] = useState(null);
   const [mainAnimation, setMainAnimation] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setAnimationTrigger(true);
@@ -25,10 +26,13 @@ const Question = ({ testID, answersList, questionCount }) => {
       } catch (error) {
         console.error('Error fetching page data:', error);
       }
+      return new Promise((resolve) => setTimeout(resolve, 2000));
     };
 
     if (slug) {
-      fetchData();
+      fetchData().then(() => {
+        setLoading(false);
+      });
     }
 
     const timeout = setTimeout(() => {
@@ -86,6 +90,10 @@ const Question = ({ testID, answersList, questionCount }) => {
       </div>
     );
   });
+
+  if (loading) {
+    return <div className="spinner">Loading...</div>; // Your loading spinner or skeleton screen
+  }
 
   return (
     <>
