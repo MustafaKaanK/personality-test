@@ -87,17 +87,16 @@ const Index = () => {
 
     return (
         <>
-        <div className={`${questionStyle.spinner} ${animationTrigger ? questionStyle.spinneractive : ''}`}>Loading...</div>
-        <div className={styles.fadeIn}>
-        
-            <div className={`${styles.background} ${styles.fadeIn}`}>
+         <div className={styles.fadeIn}>   
+         <div className={`${questionStyle.spinner} ${animationTrigger ? questionStyle.spinneractive : ''}`}>Loading...</div>Loading has completed     
+              <div className={`${styles.background} ${styles.fadeIn}`}>
             
                 {buttons}
                 <DropDownsDescriptionIndex />
             
                 
-        </div>
-        </div>
+               </div>
+           </div>       
         </>
     );
 };
