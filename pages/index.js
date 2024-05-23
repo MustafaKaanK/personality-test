@@ -38,7 +38,7 @@ const Index = () => {
 
         const timeout = setTimeout(() => {
             setAnimationTrigger(false);
-          }, 1300);
+          }, 2700);
 
           return () => {
             clearTimeout(timeout);
@@ -87,8 +87,9 @@ const Index = () => {
 
     return (
         <>
+        <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
          <div className={styles.fadeIn}>   
-         <div className={`${questionStyle.spinner} ${animationTrigger ? questionStyle.spinneractive : ''}`}>Loading...</div>Loading has completed     
+            
               <div className={`${styles.background} ${styles.fadeIn}`}>
             
                 {buttons}

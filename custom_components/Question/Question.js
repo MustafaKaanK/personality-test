@@ -97,7 +97,7 @@ const Question = ({ testID, answersList, questionCount }) => {
 
   return (
     <>
-      <div className={`${questionStyle.spinner} ${animationTrigger ? questionStyle.spinneractive : ''}`}>Loading...</div>
+      <div className={`${questionStyle.spinner} ${animationTrigger ? questionStyle.spinneractive : ''}`}>Loading...</div>Loading has completed
       <div className={`${questionStyle.background} ${mainAnimation ? questionStyle.enlargeY : ''}`}></div>
       <div className={`${questionStyle.outerCard} ${mainAnimation ? questionStyle.enlarge : ''}`}>
         <div className={questionStyle.card}>
