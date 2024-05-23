@@ -64,7 +64,7 @@
     animation: enlargeAnimationY 1.9s ease forwards, fadeInAnimation 0.85s ease forwards;
   }
   .enlargeX {
-    animation: enlargeAnimationX 1.1s ease forwards, fadeInAnimation 1.15s ease forwards, avoidClick 1s ease;     
+    animation: enlargeAnimationX 1.14s ease forwards, fadeInAnimation 1.22s ease forwards, avoidClick 1s ease;     
     
   }
 
