@@ -91,9 +91,7 @@ const Question = ({ testID, answersList, questionCount }) => {
     );
   });
 
-  if (loading) {
-    return <div className="spinner">Loading...</div>; // Your loading spinner or skeleton screen
-  }
+
 
   return (
     <>
