@@ -49,7 +49,7 @@
   box-sizing: border-box;
   flex-shrink: 1;
   opacity: 1;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.8s ease;
 }
 
 .backgroundtransition {
