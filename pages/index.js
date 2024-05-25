@@ -90,7 +90,7 @@ const Index = () => {
         <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
          <div className={styles.fadeIn}>   
             
-              <div className={`${styles.background} ${styles.fadeIn}`}>
+              <div className={`${animationTrigger ? styles.backgroundtransition : styles.background}`}>
             
                 {buttons}
                 <DropDownsDescriptionIndex />
