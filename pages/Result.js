@@ -24,7 +24,7 @@ const Result = () =>{
     } 
       const timeout = setTimeout(() => {
         setAnimationTrigger(false);
-      }, 2242);
+      }, 2002);
     
       return () => clearTimeout(timeout);
     
@@ -78,8 +78,8 @@ const Result = () =>{
     <>
       <div className={`${questionStyle.background}`}>
         <div className={`${questionStyle.Resultcard} ${animationTrigger ? questionStyle.cardResult : ''}`}>
-          <div className={`${questionStyle.innerCard} ${animationTrigger ? questionStyle.fadeInEx : ''}`}>
-            <img src={`${descriptionTitle}.jpg`} className={`${questionStyle.img} ${animationTrigger ? questionStyle.fadeInEx : ''}`} alt="Image" />
+          <div className={`${animationTrigger ? questionStyle.fadeInEx : questionStyle.innerCard}`}>
+            <img src={`${descriptionTitle}.jpg`} className={`${questionStyle.img} `} alt="Image" />
             <div>
               {descriptionTitle}
             </div>

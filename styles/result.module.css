@@ -32,6 +32,7 @@
   filter: contrast(110%);
   justify-content: center;
   vertical-align: top;
+  flex-shrink: 0;
 }
 
 .Resultcard {
@@ -66,6 +67,8 @@
   padding-top: 3vh;
   font-size: 140%;
   font-family: Arial;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 .description {
@@ -81,7 +84,18 @@
 }
 
 .fadeInEx {
-  animation: fadeInAnimation 1.9s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  width: 60vw;
+  height: 50vh;
+  gap: 1vh;
+  color: rgba(0, 0, 0, 1);
+  padding-top: 3vh;
+  font-size: 140%;
+  font-family: Arial;
+  opacity: 0;
 }
 
 .cardResult {
@@ -94,11 +108,11 @@
   0% {
       opacity: 0;
   }
-  70% {
-      opacity: 0.01;
+  60% {
+      opacity: 0;
   }
   100% {
-      opacity: 1;
+      opacity: 1.5;
   }
 }
 
