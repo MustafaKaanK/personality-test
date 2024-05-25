@@ -29,9 +29,7 @@ const Index = () => {
 
 
     
-      fetchData().then(() => {
-        setLoading(false);
-      });
+      fetchData();
     
 
 
