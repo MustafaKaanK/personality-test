@@ -136,11 +136,7 @@
         
     }
 
-    99% {
-        transform: scale(1.04);
-        font-weight: 300;
-        font-style: normal;
-    }
+   
     100% {
         transform: scale(1);        
     }
