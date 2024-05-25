@@ -159,13 +159,6 @@
       transform: scale(1.9);
   }
 
-  40% {
-    transform: scale(1.9);
-}
-
-  68% {
-      transform: scale(1.5);
-  }
   100% {
       transform: scale(1);        
   }
