@@ -129,23 +129,15 @@
 
   @keyframes enlargeAnimation {
     0% {
-        transform: scale(1);
+        transform: scale(1.25);
         font-weight: lighter;
         font-style: normal;
         letter-spacing: 0px;
         
     }
 
-    40% {
-      transform: scale(1);
-      font-weight: lighter;
-      font-style: normal;
-      letter-spacing: 0px;
-      
-  }
-
-    82% {
-        transform: scale(1.25);
+    99% {
+        transform: scale(1.04);
         font-weight: 300;
         font-style: normal;
     }
