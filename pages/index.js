@@ -29,14 +29,16 @@ const Index = () => {
 
 
     
-      fetchData();
+      fetchData().then(() => {
+        setLoading(false);
+      });
     
 
 
 
         const timeout = setTimeout(() => {
             setAnimationTrigger(false);
-          }, 4000);
+          }, 4200);
 
           return () => {
             clearTimeout(timeout);
@@ -86,7 +88,7 @@ const Index = () => {
     return (
         <>
         <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
-         <div className={styles.fadeIn}>   
+          
             
               <div className={`${animationTrigger ? styles.backgroundtransition : styles.background}`}>
             
@@ -94,8 +96,7 @@ const Index = () => {
                 <DropDownsDescriptionIndex />
             
                 
-               </div>
-           </div>       
+               </div>     
         </>
     );
 };

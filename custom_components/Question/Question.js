@@ -11,7 +11,6 @@ const Question = ({ testID, answersList, questionCount }) => {
   const [sendData, setSendData] = useLocalStorage('myArray', []);
   const [animationTrigger, setAnimationTrigger] = useState(null);
   const [mainAnimation, setMainAnimation] = useState(true);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setAnimationTrigger(true);
@@ -29,11 +28,7 @@ const Question = ({ testID, answersList, questionCount }) => {
       return new Promise((resolve) => setTimeout(resolve, 2500));
     };
 
-    if (slug) {
-      fetchData().then(() => {
-        setLoading(false);
-      });
-    }
+      fetchData();
 
     const timeout = setTimeout(() => {
       setAnimationTrigger(null);
