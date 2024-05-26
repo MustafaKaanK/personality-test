@@ -77,8 +77,8 @@ const Result = () =>{
   return (
     <>
       <div className={`${questionStyle.background}`}>
-        <div className={`${questionStyle.Resultcard} ${animationTrigger ? questionStyle.cardResult : ''}`}>
-          <div className={`${animationTrigger ? questionStyle.fadeInEx : questionStyle.innerCard}`}>
+        <div className={`${questionStyle.Resultcard} `}>
+          <div className={`${animationTrigger ? '' : questionStyle.innerCard}`}>
             <img src={`${descriptionTitle}.jpg`} className={`${questionStyle.img} `} alt="Image" />
             <div>
               {descriptionTitle}
