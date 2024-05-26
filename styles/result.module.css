@@ -65,8 +65,8 @@
   gap: 1vh;
   color: rgba(0, 0, 0, 1);
   padding-top: 3vh;
-  font-size: 140%;
-  font-family: Arial;
+  font-size: 200%;
+  font-family: 'Calibri';
   opacity: 1;
   transition: opacity 1s ease;
 }
