@@ -95,10 +95,10 @@ const Question = ({ testID, answersList, questionCount }) => {
         <div className={questionStyle.card}>
           <div className={`${questionStyle.innerCard}`}>
             <div className={`${questionStyle.button}`} onClick={handlePrevious}>BACK</div>
-            <div className={`${questionStyle.title} ${animationTrigger ? questionStyle.enlargeX : ''}`}>{description}</div>
+            <div className={`${questionStyle.title} ${animationTrigger && slug != 1 ? questionStyle.enlargeX : ''}`}>{description}</div>
             <div className={`${questionStyle.index}`}>{slug}/{questionCount}</div>
           </div>
-          <div className={`${questionStyle.optionBox} ${animationTrigger ? questionStyle.enlargeX : ''}`}>
+          <div className={`${questionStyle.optionBox} ${animationTrigger && slug != 1  ? questionStyle.enlargeX : ''}`}>
             {optionArray}
           </div>
         </div>
