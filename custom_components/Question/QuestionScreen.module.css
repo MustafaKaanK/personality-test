@@ -79,7 +79,7 @@
   }
 
   .enlarge {
-    animation: enlargeAnimation 1.2s ease forwards, fadeInAnimationalter 0.8s ease forwards, avoidClick 1s ease;
+    animation: enlargeAnimation 1.2s ease forwards, fadeInAnimationalter 1s ease forwards, avoidClick 1s ease;
   }
   .enlargeY {
     animation: enlargeAnimationY 2s ease, fadeInAnimationalter 0.8s ease forwards, avoidClick 6s ease;
@@ -119,9 +119,6 @@
     0% {
       opacity: 0;
   }
-80%{
-       opacity: 0;
- }
   100% {
       opacity: 1;
   }
