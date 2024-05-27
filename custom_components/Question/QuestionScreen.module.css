@@ -131,6 +131,7 @@
 
     0% {
       pointer-events: none;
+      
   }
 99%{
        pointer-events: none;
@@ -239,9 +240,6 @@
     background-color: rgba(5, 245, 37, 0.349);
     
   } 
-.button:activate{
-    font-size: 1.1em;
-  }
   
   
   .index{
@@ -363,11 +361,11 @@
   
   .button:hover{
     transform: scale(1.00);
-    background-color: rgba(5, 245, 37, 0);
+    background-color: rgba(230, 235, 230, 0.801);
   }
   .option:hover{    
   transform: scale(1.00);
-  background-color: rgba(5, 245, 37, 0);
+  background-color: rgba(230, 235, 230, 0.801);
   }
 }
 
