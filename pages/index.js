@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import styles from '../styles/index.module.css';
 import { useLocalStorage } from 'react-use';
 import DropDownsDescriptionIndex from '../custom_components/Drop_down/DropDownForIndex';
-import AddMetaTag  from '../custom_components/AddMetaTag';
 
 const Index = () => {
     const router = useRouter();
@@ -89,7 +88,6 @@ const Index = () => {
 
     return (
         < >
-        <AddMetaTag />
         <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
           
             
