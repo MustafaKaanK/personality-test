@@ -18,9 +18,17 @@ const Index = () => {
         document.getElementsByTagName('head')[0].appendChild(metaTag);
       }
 
+      addNoTranslateMetaTag(); // Call the function here to ensure the meta tag is added before the app renders
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
     useEffect(() => {
         setAnimationTrigger(true);
-        addNoTranslateMetaTag();
         const fetchData = async () => {
             try {
                 const response = await fetch(`https://quiz-backend-sk11.onrender.com/quizzes/`);
