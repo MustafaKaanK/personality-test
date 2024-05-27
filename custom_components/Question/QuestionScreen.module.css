@@ -31,7 +31,7 @@
   top: 0;
   left: 0vw;
   height: 100vh;
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  transition: opacity 0.8s ease, transform 1.5s ease;
   width: 100vw;
   border-radius: 1vh;
   box-sizing: border-box;
