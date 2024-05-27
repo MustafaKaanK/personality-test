@@ -46,7 +46,7 @@ const Question = ({ testID, answersList, questionCount }) => {
     if(slug == 1){
     const mainTimeout = setTimeout(() => {
       setMainAnimation(null);
-    }, 860);
+    }, 100);
     return () => {
       clearTimeout(mainTimeout);
     };
