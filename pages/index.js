@@ -1,9 +1,9 @@
-import useNoTranslateMetaTag from '../custom_components/Custom_hook/useNoTranslateMetaTag';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/index.module.css';
 import { useLocalStorage } from 'react-use';
 import DropDownsDescriptionIndex from '../custom_components/Drop_down/DropDownForIndex';
+import AddMetaTag  from '../custom_components/AddMetaTag';
 
 const Index = () => {
     const router = useRouter();
@@ -12,7 +12,6 @@ const Index = () => {
     const [animationTrigger, setAnimationTrigger] = useState(true);
     const [loading, setLoading] = useState(true);
 
-    useNoTranslateMetaTag();
 
     useEffect(() => {
         setAnimationTrigger(true);
@@ -90,6 +89,7 @@ const Index = () => {
 
     return (
         < >
+        <AddMetaTag />
         <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
           
             

@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-function useNoTranslateMetaTag() {
+function AddMetaTag() {
   useEffect(() => {
     const metaTag = document.createElement('meta');
     metaTag.name = 'google';
@@ -11,6 +11,8 @@ function useNoTranslateMetaTag() {
       document.head.removeChild(metaTag);
     };
   }, []);
+
+  return null;
 }
 
-export default useNoTranslateMetaTag;
+export default AddMetaTag;
