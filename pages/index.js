@@ -11,8 +11,16 @@ const Index = () => {
     const [animationTrigger, setAnimationTrigger] = useState(true);
     const [loading, setLoading] = useState(true);
 
+    function addNoTranslateMetaTag() {
+        const metaTag = document.createElement('meta');
+        metaTag.name = 'google';
+        metaTag.content = 'notranslate';
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+
     useEffect(() => {
         setAnimationTrigger(true);
+        addNoTranslateMetaTag();
         const fetchData = async () => {
             try {
                 const response = await fetch(`https://quiz-backend-sk11.onrender.com/quizzes/`);
@@ -87,7 +95,7 @@ const Index = () => {
 
     return (
         < >
-        <div  name="google" content="notranslate" className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
+        <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
           
             
               <div className={`${animationTrigger ? styles.backgroundtransition : styles.background}`}>
