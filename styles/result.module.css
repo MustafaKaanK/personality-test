@@ -68,7 +68,7 @@
   font-size: 200%;
   font-family: 'Calibri';
   opacity: 1;
-  transition: opacity 0.95s ease-in;
+  transition: opacity 0.65s ease-in;
 }
 
 .description {
