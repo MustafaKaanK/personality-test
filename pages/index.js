@@ -1,3 +1,4 @@
+import useNoTranslateMetaTag from '../custom_components/Custom_hook/useNoTranslateMetaTag';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/index.module.css';
@@ -11,21 +12,7 @@ const Index = () => {
     const [animationTrigger, setAnimationTrigger] = useState(true);
     const [loading, setLoading] = useState(true);
 
-    function addNoTranslateMetaTag() {
-        const metaTag = document.createElement('meta');
-        metaTag.name = 'google';
-        metaTag.content = 'notranslate';
-        document.getElementsByTagName('head')[0].appendChild(metaTag);
-      }
-
-      addNoTranslateMetaTag(); // Call the function here to ensure the meta tag is added before the app renders
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    useNoTranslateMetaTag();
 
     useEffect(() => {
         setAnimationTrigger(true);
