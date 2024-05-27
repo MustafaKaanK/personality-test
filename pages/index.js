@@ -86,8 +86,8 @@ const Index = () => {
     
 
     return (
-        <>
-        <div className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
+        < >
+        <div  name="google" content="notranslate" className={`${styles.spinner} ${animationTrigger ? styles.spinneractive : ''}`}>Loading...</div>
           
             
               <div className={`${animationTrigger ? styles.backgroundtransition : styles.background}`}>
