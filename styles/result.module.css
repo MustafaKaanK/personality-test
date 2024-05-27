@@ -68,7 +68,7 @@
   font-size: 200%;
   font-family: 'Calibri';
   opacity: 1;
-  transition: opacity 1.6s ease;
+  transition: opacity 1.15s ease;
 }
 
 .description {
@@ -199,7 +199,6 @@
 }
 
 .button:hover {
-  backdrop-filter: blur(5px);
   transform: scale(1.05);
 }
 
