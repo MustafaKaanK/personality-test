@@ -79,8 +79,8 @@
   background-position: center;
   opacity: 95%;
   border: 2px solid #333;
-  width: calc(300px + 2vw);
-  aspect-ratio: 10/11;
+  height: 45%;
+  width: calc(220px + 6vw);
   box-sizing: border-box;
   text-decoration: none;
   display: inline-block;
