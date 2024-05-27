@@ -260,7 +260,7 @@
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .share {
   }
   .Resultcard {
@@ -270,6 +270,7 @@
   .description {
       padding-top: 2vh;
       width: 80vw;
+      font-size: calc(1.5vw + 1.6vh - 4.8px);
   }
   .socialbox {
       transform: translate(-155%, 445%);
@@ -301,7 +302,7 @@
   }
   .description {
       margin-top: -1vh;
-      font-size: calc(1.5vw + 1.55vh - 4.9px);
+      font-size: calc(1.5vw + 1.6vh - 4.8px);
   }
   .button {
       margin-left: calc(-148px + 76vw);
