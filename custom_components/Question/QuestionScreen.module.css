@@ -79,7 +79,7 @@
   }
 
   .enlarge {
-    animation: enlargeAnimation 1.2s ease forwards, fadeInAnimationalter 2s ease forwards, avoidClick 1.2s ease;
+    animation: enlargeAnimation 1.5s ease forwards, fadeInAnimationalter 2s ease forwards, avoidClick 1.2s ease;
   }
   .enlargeY {
     animation: enlargeAnimationY 2s ease, fadeInAnimationalter 1.2s ease forwards, avoidClick 6s ease;
@@ -130,7 +130,7 @@
 
   @keyframes enlargeAnimation {
     0% {
-        transform: scale(6);
+        transform: scale(16);
         font-weight: lighter;
         font-style: normal;
         letter-spacing: 0px;
