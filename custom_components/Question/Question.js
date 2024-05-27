@@ -42,12 +42,11 @@ const Question = ({ testID, answersList, questionCount }) => {
   }, [slug]);
 
   useEffect(() => {
-    setMainAnimation(true);
 
     if(slug == 1){
     const mainTimeout = setTimeout(() => {
       setMainAnimation(null);
-    }, 6060);
+    }, 2060);
     return () => {
       clearTimeout(mainTimeout);
     };
@@ -104,8 +103,8 @@ const Question = ({ testID, answersList, questionCount }) => {
 
   return (
     <>
-      <div className={`${questionStyle.background} ${mainAnimation ? questionStyle.enlargeY : ''}`}></div>
-      <div className={`${questionStyle.outerCard} ${mainAnimation ? questionStyle.enlarge : ''}`}>
+      <div className={`${mainAnimation ? questionStyle.enlargeY : questionStyle.background}`}></div>
+      <div className={` ${mainAnimation ? questionStyle.enlarge : questionStyle.outerCard}`}>
         <div className={questionStyle.card}>
           <div className={`${questionStyle.innerCard}`}>
             <div className={`${questionStyle.button}`} onClick={handlePrevious}>BACK</div>
