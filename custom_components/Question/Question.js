@@ -41,6 +41,20 @@ const Question = ({ testID, answersList, questionCount }) => {
     };
   }, [slug]);
 
+  useEffect(() => {
+    setMainAnimation(true);
+
+    if(slug == 1){
+    const mainTimeout = setTimeout(() => {
+      setMainAnimation(null);
+    }, 2060);
+    return () => {
+      clearTimeout(mainTimeout);
+    };
+    } 
+
+  }, [slug]);
+
   const description = pageData ? pageData.description : '';
   const optionsslug = pageData ? pageData.options : [];
 
