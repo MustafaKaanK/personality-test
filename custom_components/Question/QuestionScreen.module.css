@@ -95,6 +95,7 @@
   position: fixed;
   transform: scale(1.9);
   opacity: 0;
+  font-weight: 500;
   pointer-events: none;
 }
 
@@ -120,7 +121,7 @@
   pointer-events: none;
   }
   .enlargeX {
-    animation: enlargeAnimationX 1.14s ease forwards, fadeInAnimation 1.22s ease forwards, avoidClick 1s ease;     
+    animation: enlargeAnimationX 1.14s ease forwards, fadeInAnimation 1.22s ease forwards, avoidClick 1.17s ease;     
     
   }
 
