@@ -80,7 +80,7 @@ const Result = () =>{
       <div className={`${questionStyle.Resultcard} ${animationTrigger ? questionStyle.cardResult : ''}`}>
           <div className={`${animationTrigger ? questionStyle.fadeInEx : questionStyle.innerCard}`}>
             <img src={`${descriptionTitle}.jpg`} className={`${questionStyle.img} `} alt="Image" />
-            <div>
+            <div style={{whiteSpace: 'nowrap'}}>
               {descriptionTitle}
             </div>
             <div className={questionStyle.description}> 
