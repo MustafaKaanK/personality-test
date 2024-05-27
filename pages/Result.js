@@ -24,7 +24,7 @@ const Result = () =>{
     } 
       const timeout = setTimeout(() => {
         setAnimationTrigger(false);
-      }, 1502);
+      }, 1102);
     
       return () => clearTimeout(timeout);
     
