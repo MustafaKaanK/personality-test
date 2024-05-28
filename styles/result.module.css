@@ -76,7 +76,7 @@
   padding: 0 0.1vw 0 0.1vw;
   width: 60vw;
   -webkit-line-clamp: 4;
-  font-size: calc(0.5vw + 2.1vh + 0px);
+  font-size: calc(1.1vw + 1.6vh - 6px);
 }
 
 .fadeIn {
@@ -270,7 +270,7 @@
   .description {
       padding-top: 2vh;
       width: 80vw;
-      font-size: calc(1.5vw + 1.6vh - 4.8px);
+      font-size: calc(1.55vw + 1.6vh - 7px);
   }
   .socialbox {
       transform: translate(-155%, 445%);
@@ -302,7 +302,7 @@
   }
   .description {
       margin-top: -1vh;
-      font-size: calc(1.5vw + 1.6vh - 4.8px);
+      font-size: calc(1.55vw + 1.5vh - 4.8px);
   }
   .button {
       margin-left: calc(-148px + 76vw);
