@@ -257,7 +257,6 @@
     flex-shrink: 1;
     box-sizing: content-box;
     position: relative;
-    cursor: pointer;
     border: 0.5px solid black;
     margin-right: 1%;
     /*make text content unclickable*/
