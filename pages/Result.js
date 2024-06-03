@@ -71,8 +71,7 @@ const Result = () =>{
   const handleclick = () => {
     router.push({
       pathname:'/'
-  })}
-  
+  })}  
 
   return (
     <>
@@ -87,7 +86,7 @@ const Result = () =>{
               {descriptionText} 
             </div>
           </div>  
-          <div className={questionStyle.socialbox}>
+          <div className={ `${questionStyle.socialbox} ${animationTrigger ? questionStyle.fadeInEx : ''}`}>
             <FacebookShareButton className={questionStyle.share}  url='https://dog-personality-test.vercel.app/'><FacebookIcon  borderRadius={40}></FacebookIcon></FacebookShareButton>
             <LinkedinShareButton className={questionStyle.share} url='https://dog-personality-test.vercel.app/'><LinkedinIcon  borderRadius={40}></LinkedinIcon></LinkedinShareButton>
             <TwitterShareButton className={questionStyle.share}  url='https://dog-personality-test.vercel.app/'><TwitterIcon  borderRadius={40}></TwitterIcon></TwitterShareButton>
